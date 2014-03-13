@@ -27,6 +27,7 @@ python TinyBib.py example.bbl
 Then run pdflatex/latex twice to get the references right:
 
 pdflatex example
+
 pdflatex example
 
 And that's it.
