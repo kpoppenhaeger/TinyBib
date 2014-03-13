@@ -1,0 +1,134 @@
+%% LaTeX template, for example for a science justification.
+
+\documentclass[letterpaper,11pt,twocolumn]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Included packages %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphics,graphicx}
+
+\usepackage{natbib}
+\setlength{\bibsep}{-10pt}
+\renewcommand\refname{}
+
+\usepackage[font=small]{caption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Page dimensions %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\textwidth}{6.5in} 
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-0.0625in} 
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in} 
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in} 
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+
+
+\newcommand{\apj}{ApJ}
+\newcommand{\aap}{A\&A}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\nat}{Nature}
+\newcommand{\apjl}{ApJL}
+\newcommand{\apjs}{ApJS}
+\newcommand{\aj}{AJ}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Section heading format %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand{\section}{\@startsection%
+{section}{1}{0mm}{-\baselineskip}%
+{0.5\baselineskip}{\normalfont\Large\bfseries}}%
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Start of document %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Content %%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} 
+\bfseries\uppercase{
+Some epic proposal title
+}
+\end{center}
+
+
+Say you're about to write some epic observing proposal. Or anything else where you have a strict page limit, which is why you use two-column format by default.
+
+Say you want the reader to see that you have done awesome stuff, so you cite everything with author names \citep{Poppenhaeger2013}.
+
+This will use quite some space in the proposal text, which means you want to save space in the references section. So I've made a bibliography style file (bibshort.bst) and a python script (TibyBib.py) to hack the output from that file in order to get a really small references section.
+
+So, let's cite some more stuff and see what it looks like: \cite{Guenther2012, Robrade2012, Albrecht2012}. 
+
+\bigskip
+
+We run \verb+pdflatex+ (or \verb+latex+):
+
+\bigskip
+
+\verb+pdflatex example+
+
+\bigskip
+
+then \verb+bibtex+:
+
+\bigskip
+
+\verb+bibtex example+
+
+\bigskip
+
+and then we run the python script:
+
+\bigskip
+\verb+python bib_tiny.py example.bbl+
+
+\bigskip
+
+Then we re-run \verb+pdflatex+/\verb+latex+ twice to get the references correct:
+
+\bigskip
+
+\verb+pdflatex example+
+
+\verb+pdflatex example+
+
+\bigskip
+
+And then the tiny references section looks like this:
+
+\begin{footnotesize}
+
+\bibliographystyle{bibshort}
+\bibliography{mybib.bib}
+
+\end{footnotesize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% End of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+

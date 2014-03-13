@@ -1,0 +1,21 @@
+\begin{thebibliography}{4}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\item
+\begin{minipage}{0.5\textwidth}
+{Albrecht}, S., {et~al.} 2012, \apj, 757, 18 $\bullet$
+{G{\"u}nther}, H.~M., {et~al.} 2012, \aj, 144, 101 $\bullet$
+{Poppenhaeger}, K., {et~al.} 2013, \apj, 773, 62 $\bullet$
+{Robrade}, J., {et~al.} 2012, \aap, 543, A84 $\bullet$
+\end{minipage}
+\bibitem[{{Albrecht} {et~al.}(2012){Albrecht}, {Winn}, {Johnson}, {Howard},
+  {Marcy}, {Butler}, {Arriagada}, {Crane}, {Shectman}, {Thompson}, {Hirano},
+  {Bakos}, \& {Hartman}}]{Albrecht2012}
+\bibitem[{{G{\"u}nther} {et~al.}(2012){G{\"u}nther}, {Wolk}, {Spitzbart},
+  {Gutermuth}, {Forbrich}, {Wright}, {Allen}, {Bourke}, {Megeath}, \&
+  {Pipher}}]{Guenther2012}
+\bibitem[{{Poppenhaeger} {et~al.}(2013){Poppenhaeger}, {Schmitt}, \&
+  {Wolk}}]{Poppenhaeger2013}
+\bibitem[{{Robrade} {et~al.}(2012){Robrade}, {Schmitt}, \&
+  {Favata}}]{Robrade2012}
+\end{thebibliography}
