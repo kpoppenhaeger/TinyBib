@@ -10,6 +10,15 @@ Say you want the reader to see that you have done awesome stuff, so you cite eve
 
 This will use quite some space in the proposal text, which means you want to save space in the references section. So I've made a bibliography style file (bibshort.bst) and a python script (TinyBib.py) to hack the output from that file in order to get a really small references section.
 
+For this to work, you will need these lines in the preamble of your latex file (all included in example.tex):
+
+\usepackage{natbib}
+
+\setlength{\bibsep}{-10pt}
+
+\renewcommand\refname{}
+
+
 Example how to use it:
 
 Run pdflatex (or latex) for the example.tex file:
